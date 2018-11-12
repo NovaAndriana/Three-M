@@ -1,42 +1,49 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Three_M._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Three_M.Default" %>
 
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<!DOCTYPE html>
+<html lang="en" >
 
-    <div class="jumbotron">
-        <h1>ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS, and JavaScript.</p>
-        <p><a href="http://www.asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<head>
+  <meta charset="UTF-8">
+  <title>Three-M System Information</title>
+  <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+      <link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+    body {
+    color: #797979;
+    background: #f1f2f7 url(../images/b.jpg) repeat;
+    font-family: 'Open Sans', sans-serif;
+    padding: 0px !important;
+    margin: 0px !important;
+    font-size: 13px;
+}
+</style>
+</head>
+<body>
+  <div class="login_form">
+  <setion class="login-wrapper">
+  
+    <div class="logo">
+		 <%--<a target="_blank" rel="noopener" href="https://unrealnavigation.com">--%>
+		 <img src="images/logo-login.png" alt=""></a>
     </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET Web Forms lets you build dynamic websites using a familiar drag-and-drop, event-driven model.
-            A design surface and hundreds of controls and components let you rapidly build sophisticated, powerful UI-driven sites with data access.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301948">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>
-                NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
-            </p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
-            </p>
-            <p>
-                <a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
-            </p>
-        </div>
-    </div>
-
-</asp:Content>
+    
+    <form id="form1" method="post" runat="server" action="Default2.aspx">
+      <label for="username">User Name</label>
+      <input  required name="login[username]" type="text" autocapitalize="off" autocorrect="off"/>
+      
+      <label for="password">Password</label>
+      <input class="password" required name="login[password]" type="password" />
+      <div class="hide-show">
+        <span>Show</span>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    
+  </section>
+  </div>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script  src="js/index.js"></script>
+</body>
+</html>
