@@ -31,3 +31,4 @@ D:\NOVA\GitHub\Three-M\Three-M\Three-M\bin\Microsoft.CodeDom.Providers.DotNetCom
 D:\NOVA\GitHub\Three-M\Three-M\Three-M\obj\Debug\Three-M.csprojResolveAssemblyReference.cache
 D:\NOVA\GitHub\Three-M\Three-M\Three-M\obj\Debug\Three-M.dll
 D:\NOVA\GitHub\Three-M\Three-M\Three-M\obj\Debug\Three-M.pdb
+D:\NOVA\GitHub\Three-M\Three-M\Three-M\bin\MySql.Data.DLL
