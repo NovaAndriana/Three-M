@@ -116,6 +116,7 @@
     <Content Include="Default.aspx" />
     <Content Include="js\index.js" />
     <Content Include="reg\reg.aspx" />
+    <Content Include="reg\StyleSheet1.css" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="Web.config" />
