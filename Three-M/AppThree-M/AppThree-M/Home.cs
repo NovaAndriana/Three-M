@@ -75,5 +75,77 @@ namespace AppThree_M
             if (e.Document.Caption == "Employees") employeesUserControl = CreateUserControl("Employees");
             else customersUserControl = CreateUserControl("Customers");
         }
+
+        private void BtnMatrial_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch(Exception ex)
+            {
+               // MessageBox(e.ToString())
+            }
+        }
+
+        private void BtnMachine_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+            }
+        }
+
+        private void BtnEmployee_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void BtnCustomerSPK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void BtnProdactionReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
+
+        private void BtnMatrialCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            try
+            {
+
+            }
+            catch(Exception ex)
+            {
+
+            }
+        }
     }
 }
