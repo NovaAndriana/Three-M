@@ -144,4 +144,6 @@ D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\bin\Debug\es\DevExpress.Xtr
 D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\bin\Debug\ja\DevExpress.XtraTreeList.v17.1.resources.dll
 D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\bin\Debug\ru\DevExpress.XtraTreeList.v17.1.resources.dll
 D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\obj\Debug\AppThree_M.Home.resources
-D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\obj\Debug\AppThree_M.LoginPage.resources
+D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\obj\Debug\AppThree_M.FrmLogin.resources
+D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\obj\Debug\AppThree_M.FrmRegister.resources
+D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\bin\Debug\MySql.Data.DLL

@@ -72,6 +72,7 @@
             // 
             // ribbonControl
             // 
+            this.ribbonControl.ColorScheme = DevExpress.XtraBars.Ribbon.RibbonControlColorScheme.DarkBlue;
             this.ribbonControl.ExpandCollapseItem.Id = 0;
             this.ribbonControl.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl.ExpandCollapseItem,
@@ -95,7 +96,7 @@
             this.ribbonPage1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(1058, 146);
+            this.ribbonControl.Size = new System.Drawing.Size(1054, 149);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -118,8 +119,8 @@
             // 
             this.BtnMatrial.Caption = "Matrial";
             this.BtnMatrial.Id = 50;
-            this.BtnMatrial.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.BtnMatrial.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.BtnMatrial.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnMatrial.ImageOptions.Image")));
+            this.BtnMatrial.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnMatrial.ImageOptions.LargeImage")));
             this.BtnMatrial.Name = "BtnMatrial";
             this.BtnMatrial.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnMatrial_ItemClick);
             // 
@@ -127,8 +128,8 @@
             // 
             this.BtnMachine.Caption = "Machine";
             this.BtnMachine.Id = 51;
-            this.BtnMachine.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.BtnMachine.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
+            this.BtnMachine.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnMachine.ImageOptions.Image")));
+            this.BtnMachine.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnMachine.ImageOptions.LargeImage")));
             this.BtnMachine.Name = "BtnMachine";
             this.BtnMachine.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnMachine_ItemClick);
             // 
@@ -136,8 +137,8 @@
             // 
             this.BtnEmployee.Caption = "Employee";
             this.BtnEmployee.Id = 52;
-            this.BtnEmployee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.BtnEmployee.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
+            this.BtnEmployee.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnEmployee.ImageOptions.Image")));
+            this.BtnEmployee.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnEmployee.ImageOptions.LargeImage")));
             this.BtnEmployee.Name = "BtnEmployee";
             this.BtnEmployee.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnEmployee_ItemClick);
             // 
@@ -145,8 +146,8 @@
             // 
             this.BtnCustomerSPK.Caption = "Customer SPK";
             this.BtnCustomerSPK.Id = 53;
-            this.BtnCustomerSPK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.Image")));
-            this.BtnCustomerSPK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem4.ImageOptions.LargeImage")));
+            this.BtnCustomerSPK.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnCustomerSPK.ImageOptions.Image")));
+            this.BtnCustomerSPK.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnCustomerSPK.ImageOptions.LargeImage")));
             this.BtnCustomerSPK.Name = "BtnCustomerSPK";
             this.BtnCustomerSPK.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnCustomerSPK_ItemClick);
             // 
@@ -154,8 +155,8 @@
             // 
             this.BtnProdactionReport.Caption = "Prodaction Report";
             this.BtnProdactionReport.Id = 54;
-            this.BtnProdactionReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.Image")));
-            this.BtnProdactionReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem5.ImageOptions.LargeImage")));
+            this.BtnProdactionReport.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnProdactionReport.ImageOptions.Image")));
+            this.BtnProdactionReport.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnProdactionReport.ImageOptions.LargeImage")));
             this.BtnProdactionReport.Name = "BtnProdactionReport";
             this.BtnProdactionReport.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnProdactionReport_ItemClick);
             // 
@@ -163,8 +164,8 @@
             // 
             this.BtnMatrialCost.Caption = "Matrial Cost";
             this.BtnMatrialCost.Id = 55;
-            this.BtnMatrialCost.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.Image")));
-            this.BtnMatrialCost.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem6.ImageOptions.LargeImage")));
+            this.BtnMatrialCost.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnMatrialCost.ImageOptions.Image")));
+            this.BtnMatrialCost.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("BtnMatrialCost.ImageOptions.LargeImage")));
             this.BtnMatrialCost.Name = "BtnMatrialCost";
             this.BtnMatrialCost.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.BtnMatrialCost_ItemClick);
             // 
@@ -227,10 +228,10 @@
             // 
             // ribbonStatusBar
             // 
-            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 574);
+            this.ribbonStatusBar.Location = new System.Drawing.Point(0, 571);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1058, 25);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1054, 28);
             // 
             // dockManager
             // 
@@ -253,30 +254,30 @@
             this.hideContainerLeft.BackColor = System.Drawing.Color.White;
             this.hideContainerLeft.Controls.Add(this.dockPanel);
             this.hideContainerLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.hideContainerLeft.Location = new System.Drawing.Point(0, 146);
+            this.hideContainerLeft.Location = new System.Drawing.Point(0, 149);
             this.hideContainerLeft.Name = "hideContainerLeft";
-            this.hideContainerLeft.Size = new System.Drawing.Size(23, 428);
+            this.hideContainerLeft.Size = new System.Drawing.Size(23, 422);
             // 
             // dockPanel
             // 
             this.dockPanel.Controls.Add(this.dockPanel_Container);
             this.dockPanel.Dock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel.ID = new System.Guid("a045df26-1503-4d9a-99c1-a531310af22b");
-            this.dockPanel.Location = new System.Drawing.Point(23, 146);
+            this.dockPanel.Location = new System.Drawing.Point(23, 149);
             this.dockPanel.Name = "dockPanel";
             this.dockPanel.OriginalSize = new System.Drawing.Size(200, 200);
             this.dockPanel.SavedDock = DevExpress.XtraBars.Docking.DockingStyle.Left;
             this.dockPanel.SavedIndex = 0;
-            this.dockPanel.Size = new System.Drawing.Size(200, 428);
+            this.dockPanel.Size = new System.Drawing.Size(200, 422);
             this.dockPanel.Text = "Navigation";
             this.dockPanel.Visibility = DevExpress.XtraBars.Docking.DockVisibility.AutoHide;
             // 
             // dockPanel_Container
             // 
             this.dockPanel_Container.Controls.Add(this.accordionControl);
-            this.dockPanel_Container.Location = new System.Drawing.Point(4, 26);
+            this.dockPanel_Container.Location = new System.Drawing.Point(6, 26);
             this.dockPanel_Container.Name = "dockPanel_Container";
-            this.dockPanel_Container.Size = new System.Drawing.Size(191, 398);
+            this.dockPanel_Container.Size = new System.Drawing.Size(187, 390);
             this.dockPanel_Container.TabIndex = 0;
             // 
             // accordionControl
@@ -287,7 +288,7 @@
             this.mainAccordionGroup});
             this.accordionControl.Location = new System.Drawing.Point(0, 0);
             this.accordionControl.Name = "accordionControl";
-            this.accordionControl.Size = new System.Drawing.Size(191, 398);
+            this.accordionControl.Size = new System.Drawing.Size(187, 390);
             this.accordionControl.TabIndex = 0;
             this.accordionControl.Text = "accordionControl";
             this.accordionControl.SelectedElementChanged += new DevExpress.XtraBars.Navigation.SelectedElementChangedEventHandler(this.accordionControl_SelectedElementChanged);
@@ -342,11 +343,12 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1058, 599);
+            this.ClientSize = new System.Drawing.Size(1054, 599);
             this.Controls.Add(this.hideContainerLeft);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Home";
             this.Ribbon = this.ribbonControl;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

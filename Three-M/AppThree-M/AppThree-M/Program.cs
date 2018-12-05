@@ -22,7 +22,7 @@ namespace AppThree_M
             BonusSkins.Register();
             SkinManager.EnableFormSkins();
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
-            Application.Run(new Home());
+            Application.Run(new FrmRegister());
         }
     }
 }
