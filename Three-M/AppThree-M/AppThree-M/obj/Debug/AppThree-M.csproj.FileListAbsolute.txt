@@ -147,3 +147,4 @@ D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\obj\Debug\AppThree_M.Home.r
 D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\obj\Debug\AppThree_M.FrmLogin.resources
 D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\obj\Debug\AppThree_M.FrmRegister.resources
 D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\bin\Debug\MySql.Data.DLL
+D:\NOVA\GitHub\Three-M\Three-M\AppThree-M\AppThree-M\bin\Debug\AppThree-M.exe.config

@@ -96,7 +96,7 @@
             this.ribbonPage1});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
             this.ribbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl.Size = new System.Drawing.Size(1054, 149);
+            this.ribbonControl.Size = new System.Drawing.Size(1052, 149);
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
             this.ribbonControl.ToolbarLocation = DevExpress.XtraBars.Ribbon.RibbonQuickAccessToolbarLocation.Hidden;
             // 
@@ -231,7 +231,7 @@
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 571);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
             this.ribbonStatusBar.Ribbon = this.ribbonControl;
-            this.ribbonStatusBar.Size = new System.Drawing.Size(1054, 28);
+            this.ribbonStatusBar.Size = new System.Drawing.Size(1052, 28);
             // 
             // dockManager
             // 
@@ -335,7 +335,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Glass Oceans";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Sharp Plus";
             // 
             // Home
             // 
@@ -343,7 +343,7 @@
             this.Appearance.Options.UseBackColor = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1054, 599);
+            this.ClientSize = new System.Drawing.Size(1052, 599);
             this.Controls.Add(this.hideContainerLeft);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbonControl);
