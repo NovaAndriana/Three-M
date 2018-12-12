@@ -11,7 +11,6 @@ using DevExpress.XtraEditors;
 using System.Net;
 using MySql.Data.MySqlClient;
 using System.Security.Cryptography;
-using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
