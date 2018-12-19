@@ -13,15 +13,142 @@ using DevExpress.XtraBars;
 using DevExpress.XtraBars.Navigation;
 using System.Net;
 using MySql.Data.MySqlClient;
+using DevExpress.XtraTab;
+using DevExpress.XtraTab.ViewInfo;
+
 namespace AppThree_M
 {
     public partial class FrmHome : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        #region Lain2
         //Koneksi Database
         string MyConnectionString = "Server='localhost';user id='root';password=;database='3MDB';";
-
         string hostName = Dns.GetHostName();
+        //public event EventHandler CloseButtonClick;
 
+
+        //private void TabHome_Matrial_CloseButtonClick(object sender, ClosePageButtonEventArgs e)
+        //{
+        //    //ClosePageButtonEventArgs arg = e as ClosePageButtonEventArgs;
+        //    TabHome_Matrial.PageVisible = false;
+        //}
+        private void TotalHargaMatrial()
+        {
+            try
+            {
+                TxtTotalMatrial.Text = Convert.ToString(Convert.ToDouble(TxtHargaMatrial.Text) * Convert.ToDouble(TxtQtyMatrial.Text));
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error Data Input !" + err.ToString());
+            }
+        }
+        public string GetID
+        {
+            get { return Lb_ID.Caption; }
+        }
+        public FrmHome()
+        {
+            InitializeComponent();
+        }
+        private void FrmHome_Load(object sender, EventArgs e)
+        {
+            // timer1.Enabled = true;
+        }
+        private void TabHome_Machine_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void TxtHargaMatrial_EditValueChanged(object sender, EventArgs e)
+        {
+            TotalHargaMatrial();
+        }
+        private void TxtQtyMatrial_EditValueChanged(object sender, EventArgs e)
+        {
+            TotalHargaMatrial();
+        }
+        #endregion
+        //-------------------------------------------------------------
+        #region Clear
+        private void ClearMatrial()
+        {
+            TxtHargaMatrial.Text = "";
+            TxtJenisMatrial.Text = "";
+            TxtNamaMatrial.Text = "";
+            TxtNamaSupplierMatrial.Text = "";
+            TxtQtyMatrial.Text = "";
+            TxtTotalMatrial.Text = "";
+            AutoIDMatrial();
+        }
+        #endregion
+//-------------------------------------------------------------
+        #region Show_Data_Table
+        private void Mesin_DT()
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(MyConnectionString);
+                con.Open();
+                MySqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "select * from MASTER_MESIN_DT";
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                DG_Machine_DT.DataSource = ds.Tables[0].DefaultView;
+                con.Close();
+            }
+            catch (Exception err)
+            {
+                string pesan = "Error when try to load data from Database. Please contact Developer" + err.ToString();
+                string judul = "Developer System WijayaSoft";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(pesan, judul, buttons, MessageBoxIcon.Error);
+            }
+        }
+        private void Mesin_Setter()
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(MyConnectionString);
+                con.Open();
+                MySqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "select * from MASTER_MESIN_SETTER";
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                //DG_Machine_Setter.DataSource = ds.Tables[0].DefaultView;
+                con.Close();
+            }
+            catch (Exception err)
+            {
+                string pesan = "" + err.ToString();
+                string judul = "";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(pesan, judul, buttons, MessageBoxIcon.Warning);
+            }
+        }
+        private void Mesin_DRT()
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(MyConnectionString);
+                con.Open();
+                MySqlCommand cmd = con.CreateCommand();
+                cmd.CommandText = "select * from MASTER_MESIN_DRT";
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                DG_Machine_DRT.DataSource = ds.Tables[0].DefaultView;
+                con.Close();
+            }
+            catch (Exception err)
+            {
+                string pesan = "Error when try to load data from Database. Please contact Developer" + err.ToString();
+                string judul = "Developer System WijayaSoft";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                MessageBox.Show(pesan, judul, buttons, MessageBoxIcon.Error);
+            }
+        }
         private void DataMatrial()
         {
             try
@@ -44,66 +171,9 @@ namespace AppThree_M
                 MessageBox.Show(pesan, judul, buttons, MessageBoxIcon.Error);
             }
         }
-        public string GetID
-        {
-            get { return Lb_ID.Caption; }
-        }
-        public FrmHome()
-        {
-            InitializeComponent();
-        }
-        private void BtnMatrial_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            TabHome_Matrial.PageVisible = true;
-            DataMatrial();
-            AutoIDMatrial();
-            DG_Matrial.ForeColor = Color.White;
-            DG_Matrial.BorderStyle = BorderStyle.Fixed3D;
-        }
-
-        private void BtnMachine_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            TabHome_Machine.PageVisible = true;
-        }
-
-        private void BtnEmployee_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            TabHome_Employee.PageVisible = true;
-        }
-
-        private void BtnCustomerSPK_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void BtnProdactionReport_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void BtnMatrialCost_ItemClick(object sender, ItemClickEventArgs e)
-        {
-
-        }
-
-        private void FrmHome_Load(object sender, EventArgs e)
-        {
-            timer1.Enabled = true;
-        }
-
-        private void ribbonStatusBar_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void ClearMatrial()
-        {
-            TxtHargaMatrial.Text = "";
-            TxtJenisMatrial.Text = "";
-            TxtNamaMatrial.Text = "";
-            TxtNamaSupplierMatrial.Text = "";
-            TxtQtyMatrial.Text = "";
-            TxtTotalMatrial.Text = "";
-        }
+        #endregion
+//-----------------------------------------------------------------------------
+        #region AutoID
         private void AutoIDMatrial()
         {
             long idx;
@@ -147,8 +217,147 @@ namespace AppThree_M
                 MessageBox.Show(Pesan, judul, buttons, MessageBoxIcon.Error);
             }
         }
-        static string CECKID;
+        #endregion
+//--------------------------------------------------------------------
+        #region Click
+        private void BtnMatrial_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            TabHome_Matrial.PageVisible = true;
+            DataMatrial();
+            AutoIDMatrial();
+            DG_Matrial.ForeColor = Color.White;
+            DG_Matrial.BorderStyle = BorderStyle.Fixed3D;
+        }
+
+        private void BtnMachine_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            TabHome_Machine.PageVisible = true;
+            Mesin_DRT();
+            Mesin_DT();
+        }
+
+        private void BtnEmployee_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            TabHome_Employee.PageVisible = true;
+        }
+        private void DG_Matrial_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = DG_Matrial.Rows[index];
+            TxtIDMatrial.Text = selectedRow.Cells[0].Value.ToString();
+            TxtNamaMatrial.Text = selectedRow.Cells[1].Value.ToString();
+            TxtQtyMatrial.Text = selectedRow.Cells[2].Value.ToString();
+            TxtJenisMatrial.Text = selectedRow.Cells[4].Value.ToString();
+            TxtHargaMatrial.Text = selectedRow.Cells[3].Value.ToString();
+            TxtNamaSupplierMatrial.Text = selectedRow.Cells[6].Value.ToString();
+            TxtTotalMatrial.Text = selectedRow.Cells[5].Value.ToString();
+        }
+        private void DG_Matrial_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+        static string a, b, c;
+
+        private void BtnCustomerSPK_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BtnProdactionReport_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+
+        private void BtnMatrialCost_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
+        private void BtnDeleteMatrial_Click(object sender, EventArgs e)
+        {
+            switch (MessageBox.Show("Do you want to delete this record ?",
+              "WijayaSoft",
+              MessageBoxButtons.YesNo,
+              MessageBoxIcon.Question))
+            {
+                case DialogResult.Yes:
+                    DeleteMatrial();
+                    break;
+
+                case DialogResult.No:
+                    ClearMatrial();
+                    break;
+            }
+        }
         private void BtnSaveMatrial_Click(object sender, EventArgs e)
+        {
+            SaveMatrial();
+        }
+        private void BtnClearMatrial_Click(object sender, EventArgs e)
+        {
+            ClearMatrial();
+        }
+        private void BtnSaveKaryawan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDeleteKaryawan_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnClearKaryawan_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void ribbonStatusBar_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            //a = LB_Berjalan.Caption;
+            //b = a.Substring(0, 1);
+            //c = a.Substring(1, a.Length - 1);
+            //LB_Berjalan.Caption = c + b;
+        }
+        #endregion
+        //-------------------------------------------------------------
+        #region Insert
+        static string CECKID2;
+        private void SaveDataEmployee()
+        {
+            try
+            {
+                MySqlConnection con = new MySqlConnection(MyConnectionString);
+                if (TxtIDMatrial.Text == "")
+                {
+                    string pesan = "Input data must be Complete. Invalid input Data !";
+                    string judul = "Developer System Wijayasoft";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    MessageBox.Show(pesan, judul, buttons, MessageBoxIcon.Warning);
+                }
+                else
+                {
+
+                    con.Open();
+                    string myIP = Dns.GetHostByName(hostName).AddressList[0].ToString();
+                    MySqlCommand cmd = con.CreateCommand();
+                    cmd.CommandText = "";
+                    cmd.Parameters.AddWithValue("", TxtHargaMatrial.Text);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Sukses");
+                    con.Close();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error" + err.ToString());
+            }
+        }
+        static string CECKID;
+
+        private void SaveMatrial()
         {
             // MessageBox.Show("Test");
             MySqlConnection con = new MySqlConnection(MyConnectionString);
@@ -162,22 +371,22 @@ namespace AppThree_M
             }
             else
             {
-               
+
                 try
                 {
                     string myIP = Dns.GetHostByName(hostName).AddressList[0].ToString();
                     MySqlCommand cmd = con.CreateCommand();
-                    cmd.CommandText = "select ID_MATRIAL from MASTER_MATRIAL where ID_MATRIAL='"+TxtIDMatrial.Text+"'";
+                    cmd.CommandText = "select ID_MATRIAL from MASTER_MATRIAL where ID_MATRIAL='" + TxtIDMatrial.Text + "'";
                     con.Open();
                     MySqlDataReader Reader = cmd.ExecuteReader();
-                    
+
                     while (Reader.Read())
                     {
                         CECKID = Reader.GetValue(0).ToString();
                     }
                     Reader.Close();
                     con.Close();
-                    if (CECKID == "" || CECKID == null )
+                    if (CECKID == "" || CECKID == null)
                     {
                         con.Open();
                         cmd.CommandText = "insert into MASTER_MATRIAL (ID_MATRIAL,NAMA,QTY,HARGA_SATUAN,JENIS,TOTAL_HARGA,NAMA_SUPPLIER,CRE_DATE,CRE_BY,COMP_ID) VALUES (@ID_MATRIAL,@NAMA,@QTY,@HARGA_SATUAN,@JENIS,@TOTAL_HARGA,@NAMA_SUPPLIER,@CRE_DATE,@CRE_BY,@COMP_ID)";
@@ -204,7 +413,7 @@ namespace AppThree_M
                     else
                     {
                         con.Open();
-                        cmd.CommandText = "update MASTER_MATRIAL set NAMA='" + TxtNamaMatrial.Text + "',QTY='" + TxtQtyMatrial.Text + "',HARGA_SATUAN='" + TxtHargaMatrial.Text + "',JENIS='" + TxtJenisMatrial.Text + "',TOTAL_HARGA='" + TxtTotalMatrial.Text + "',NAMA_SUPPLIER='" + TxtNamaSupplierMatrial.Text + "',MOD_DATE='" + DateTime.Now.ToString() + "',MOD_BY='" + Lb_ID.Caption + "' where ID_MATRIAL='"+TxtIDMatrial.Text+"'";
+                        cmd.CommandText = "update MASTER_MATRIAL set NAMA='" + TxtNamaMatrial.Text + "',QTY='" + TxtQtyMatrial.Text + "',HARGA_SATUAN='" + TxtHargaMatrial.Text + "',JENIS='" + TxtJenisMatrial.Text + "',TOTAL_HARGA='" + TxtTotalMatrial.Text + "',NAMA_SUPPLIER='" + TxtNamaSupplierMatrial.Text + "',MOD_DATE='" + DateTime.Now.ToString() + "',MOD_BY='" + Lb_ID.Caption + "' where ID_MATRIAL='" + TxtIDMatrial.Text + "'";
                         cmd.ExecuteNonQuery();
                         string pesan = "Data have been Update";
                         string judul = "WijayaSoft";
@@ -215,7 +424,7 @@ namespace AppThree_M
                         DataMatrial();
                         AutoIDMatrial();
                     }
-                       
+
                 }
                 catch (Exception err)
                 {
@@ -226,26 +435,43 @@ namespace AppThree_M
                 }
             }
         }
-        private void DG_Matrial_CellClick(object sender, DataGridViewCellEventArgs e)
+
+        #endregion
+//--------------------------------------------------------------------
+        #region Delete
+        private void DeleteMatrial()
         {
-            DataGridViewRow rows = DG_Matrial.Rows[e.RowIndex];
-            TxtIDMatrial.Text = rows.Cells[0].Value.ToString();
-            TxtNamaMatrial.Text = rows.Cells[1].Value.ToString();
+            try
+            {
+                if (TxtIDMatrial.Text == "")
+                {
+                    string pesan = "Invalid input data. Please check again or Contact Developer !";
+                    string judul = "Developer System Wijayasoft";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    MessageBox.Show(pesan, judul, buttons, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MySqlConnection con = new MySqlConnection(MyConnectionString);
+                    con.Open();
+                    MySqlCommand cmd = con.CreateCommand();
+                    cmd.CommandText = "delete from MASTER_MATRIAL where ID_MATRIAL=@ID";
+                    cmd.Parameters.AddWithValue("@ID", TxtIDMatrial.Text);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    MessageBox.Show("Record Has been Deleted !");
+                    ClearMatrial();
+                    AutoIDMatrial();
+                    DataMatrial();
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Error when try to delete data." + err.ToString());
+            }
         }
-        private void DG_Matrial_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // value from datagrid where clicked cells is same in the textbox
-            DataGridViewRow rows = DG_Matrial.Rows[e.RowIndex];
-            TxtIDMatrial.Text = rows.Cells[0].Value.ToString();
-            TxtNamaMatrial.Text = rows.Cells[1].Value.ToString();
-        }
-        static string a, b, c;
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            a = LB_Berjalan.Caption;
-            b = a.Substring(0, 1);
-            c = a.Substring(1, a.Length - 1);
-            LB_Berjalan.Caption = c + b;
-        }
+        #endregion
+//-----------------------------------------------------
+
     }
 }
