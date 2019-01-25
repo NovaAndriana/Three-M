@@ -121,6 +121,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="3m_6SM_icon.ico" />
+    <None Include="Resources\3M Logo.png" />
+    <None Include="Resources\bg.jpg" />
+    <None Include="Resources\398836_black-background-wallpaper-for-mobile.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
