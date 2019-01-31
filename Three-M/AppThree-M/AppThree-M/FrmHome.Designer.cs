@@ -845,7 +845,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.34014F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel3.Controls.Add(this.BtnClearMatrial, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.BtnDeleteMatrial, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.BtnSaveMatrial, 0, 0);
@@ -861,7 +861,7 @@
             // 
             this.BtnClearMatrial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnClearMatrial.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnClearMatrial.ImageOptions.Image")));
-            this.BtnClearMatrial.Location = new System.Drawing.Point(72, 3);
+            this.BtnClearMatrial.Location = new System.Drawing.Point(70, 3);
             this.BtnClearMatrial.Name = "BtnClearMatrial";
             this.BtnClearMatrial.Size = new System.Drawing.Size(60, 22);
             this.BtnClearMatrial.TabIndex = 18;
@@ -872,9 +872,9 @@
             // 
             this.BtnDeleteMatrial.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDeleteMatrial.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnDeleteMatrial.ImageOptions.Image")));
-            this.BtnDeleteMatrial.Location = new System.Drawing.Point(37, 3);
+            this.BtnDeleteMatrial.Location = new System.Drawing.Point(36, 3);
             this.BtnDeleteMatrial.Name = "BtnDeleteMatrial";
-            this.BtnDeleteMatrial.Size = new System.Drawing.Size(29, 22);
+            this.BtnDeleteMatrial.Size = new System.Drawing.Size(28, 22);
             this.BtnDeleteMatrial.TabIndex = 17;
             this.BtnDeleteMatrial.Text = "Delete";
             this.BtnDeleteMatrial.Click += new System.EventHandler(this.BtnDeleteMatrial_Click);
@@ -885,7 +885,7 @@
             this.BtnSaveMatrial.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSaveMatrial.ImageOptions.Image")));
             this.BtnSaveMatrial.Location = new System.Drawing.Point(3, 3);
             this.BtnSaveMatrial.Name = "BtnSaveMatrial";
-            this.BtnSaveMatrial.Size = new System.Drawing.Size(28, 22);
+            this.BtnSaveMatrial.Size = new System.Drawing.Size(27, 22);
             this.BtnSaveMatrial.TabIndex = 16;
             this.BtnSaveMatrial.Text = "Save";
             this.BtnSaveMatrial.Click += new System.EventHandler(this.BtnSaveMatrial_Click);
@@ -2533,7 +2533,7 @@
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.34014F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 91F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 101F));
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 103F));
             this.tableLayoutPanel5.Controls.Add(this.BtnClearKaryawan, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.BtnDeleteKaryawan, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.BtnSaveKaryawan, 0, 0);
@@ -2549,7 +2549,7 @@
             // 
             this.BtnClearKaryawan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnClearKaryawan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnClearKaryawan.ImageOptions.Image")));
-            this.BtnClearKaryawan.Location = new System.Drawing.Point(72, 3);
+            this.BtnClearKaryawan.Location = new System.Drawing.Point(70, 3);
             this.BtnClearKaryawan.Name = "BtnClearKaryawan";
             this.BtnClearKaryawan.Size = new System.Drawing.Size(60, 22);
             this.BtnClearKaryawan.TabIndex = 18;
@@ -2560,9 +2560,9 @@
             // 
             this.BtnDeleteKaryawan.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDeleteKaryawan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnDeleteKaryawan.ImageOptions.Image")));
-            this.BtnDeleteKaryawan.Location = new System.Drawing.Point(37, 3);
+            this.BtnDeleteKaryawan.Location = new System.Drawing.Point(36, 3);
             this.BtnDeleteKaryawan.Name = "BtnDeleteKaryawan";
-            this.BtnDeleteKaryawan.Size = new System.Drawing.Size(29, 22);
+            this.BtnDeleteKaryawan.Size = new System.Drawing.Size(28, 22);
             this.BtnDeleteKaryawan.TabIndex = 17;
             this.BtnDeleteKaryawan.Text = "Delete";
             this.BtnDeleteKaryawan.Click += new System.EventHandler(this.BtnDeleteKaryawan_Click);
@@ -2573,7 +2573,7 @@
             this.BtnSaveKaryawan.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("BtnSaveKaryawan.ImageOptions.Image")));
             this.BtnSaveKaryawan.Location = new System.Drawing.Point(3, 3);
             this.BtnSaveKaryawan.Name = "BtnSaveKaryawan";
-            this.BtnSaveKaryawan.Size = new System.Drawing.Size(28, 22);
+            this.BtnSaveKaryawan.Size = new System.Drawing.Size(27, 22);
             this.BtnSaveKaryawan.TabIndex = 16;
             this.BtnSaveKaryawan.Text = "Save";
             this.BtnSaveKaryawan.Click += new System.EventHandler(this.BtnSaveKaryawan_Click);
@@ -2619,6 +2619,7 @@
             this.TabHome_CustomerSPK.Controls.Add(this.tableLayoutPanel8);
             this.TabHome_CustomerSPK.Controls.Add(this.tableLayoutPanel7);
             this.TabHome_CustomerSPK.Name = "TabHome_CustomerSPK";
+            this.TabHome_CustomerSPK.PageVisible = false;
             this.TabHome_CustomerSPK.Size = new System.Drawing.Size(1046, 400);
             this.TabHome_CustomerSPK.Text = "Customer SPK";
             // 

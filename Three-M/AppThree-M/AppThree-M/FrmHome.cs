@@ -355,7 +355,8 @@ namespace AppThree_M
 
         private void BtnCustomerSPK_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            TabHome.Visible = true;
+            TabHome_CustomerSPK.PageVisible = true;
         }
 
         private void BtnProdactionReport_ItemClick(object sender, ItemClickEventArgs e)
