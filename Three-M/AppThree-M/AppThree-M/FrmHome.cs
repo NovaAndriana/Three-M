@@ -214,9 +214,9 @@ namespace AppThree_M
             try
             {
                 MySqlCommand cmd = con.CreateCommand();
-
+                
                 //Perintah Query untuk mendapatkan nilai terbesar dari EMP_ID
-                cmd.CommandText = "SELECT COALESCE(MAX(ID_MATRIAL)) AS IDX FROM MASTER_MATRIAL ORDER BY ID_MATRIAL DESC";
+                cmd.CommandText = "select ID_MATRIAL from MASTER_MATRIAL where ID_MATRIAL in(select max(ID_MATRIAL) from MASTER_MATRIAL) order by ID_MATRIAL desc";
 
                 MySqlDataReader dr = cmd.ExecuteReader();
 
@@ -258,9 +258,9 @@ namespace AppThree_M
             try
             {
                 MySqlCommand cmd = con.CreateCommand();
-
+                
                 //Perintah Query untuk mendapatkan nilai terbesar dari EMP_ID
-                cmd.CommandText = "SELECT COALESCE(MAX(ID_KARYAWAN)) AS IDX FROM MASTER_KARYAWAN ORDER BY ID_KARYAWAN DESC";
+                cmd.CommandText = "select ID_KARYAWAN from MASTER_KARYAWAN where ID_KARYAWAN in(select max(ID_KARYAWAN) from MASTER_KARYAWAN) order by ID_KARYAWAN desc";
 
                 MySqlDataReader dr = cmd.ExecuteReader();
 

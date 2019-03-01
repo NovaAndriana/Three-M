@@ -103,7 +103,7 @@
             this.ribbonControl3.ShowCategoryInCaption = false;
             this.ribbonControl3.ShowDisplayOptionsMenuButton = DevExpress.Utils.DefaultBoolean.False;
             this.ribbonControl3.ShowExpandCollapseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.ribbonControl3.Size = new System.Drawing.Size(686, 48);
+            this.ribbonControl3.Size = new System.Drawing.Size(686, 51);
             // 
             // barButtonItem1
             // 
@@ -173,7 +173,7 @@
             // 
             // StyleFormLogin
             // 
-            this.StyleFormLogin.LookAndFeel.SkinName = "The Asphalt World";
+            this.StyleFormLogin.LookAndFeel.SkinName = "Stardust";
             // 
             // labelControl3
             // 
